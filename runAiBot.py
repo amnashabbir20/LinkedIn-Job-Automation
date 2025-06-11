@@ -795,7 +795,7 @@ def failed_job(job_id: str, job_link: str, resume: str, date_listed, error: str,
             fieldnames = ['Job ID', 'Job Link', 'Resume Tried', 'Date listed', 'Date Tried', 'Assumed Reason', 'Stack Trace', 'External Job link', 'Screenshot Name']
             writer = csv.DictWriter(file, fieldnames=fieldnames)
             if file.tell() == 0: writer.writeheader()
-            writer.writerow({'Job ID':job_id, 'Job Link':job_link, 'Resume Tried':resume, 'Date listed':date_listed, 'Date Tried':datetime.now(), 'Assumed Reason':error, 'Stack Trace':exception, 'External Job link':application_link, 'Screenshot Name':screenshot_name})
+            writer.writerow({'Job ID':job_id, 'Job Link':job_link, 'Resume Tried':resume, 'Date listed':dateListed, 'Date Tried':datetime.now(), 'Assumed Reason':error, 'Stack Trace':exception, 'External Job link':application_link, 'Screenshot Name':screenshot_name})
             file.close()
     except Exception as e:
         print_lg("Failed to update failed jobs list!", e)

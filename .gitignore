@@ -4,7 +4,7 @@ __pycache__
 all excels
 all resumes
 logs
-
+google-creds.json
 old
 
 secrets.py
